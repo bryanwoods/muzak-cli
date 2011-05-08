@@ -1,5 +1,3 @@
-#!/usr/local/bin/node
-
 sys     = require 'sys'
 rest    = require 'restler'
 
