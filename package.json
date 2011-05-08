@@ -1,0 +1,26 @@
+{
+  "author": "Bryan Woods <bryan@howaboutwe.com> (http://bryanwoods4e.com)",
+  "name": "muzak",
+  "description": "Command line interface for Muzak",
+  "version": "0.0.1",
+  "homepage": "http://github.com/bryanwoods/muzak-cli",
+  "repository": {
+    "url": "git://github.com/bryanwoods/muzak-cli.git"
+  },
+  "main": "muzak.js",
+  "scripts": {
+    "test": "muzak"
+  },
+  "engines": {
+    "node": ">= 0.4.7"
+  },
+	"dependencies" : {
+		"coffee-script" : ">= 1.1.0",
+		"restler" : ">= 0.2.1" 
+	},
+	"bin" : {
+		"muzak" : "./bin/muzak"
+	},
+  "devDependencies": {}
+}
+
