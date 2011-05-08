@@ -24,6 +24,12 @@
 
 Muzak-CLI is a command line interface utility for Muzak. 
 
+### Installation
+
+Install Muzak-CLI via NPM
+
+    $ npm install muzak -g
+
 ### Usage
 
 Display the URL of the current Muzak room
