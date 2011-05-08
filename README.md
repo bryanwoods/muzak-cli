@@ -1,23 +1,24 @@
-             MMMMMMMMMM                                 
-         MM     M        MM                             
-      M        M            M                           
-    M         M    MM        M                          
-   M                          M                         
-  M                           M                         
- M                                                      
-                                                        
-M                                                       
-M       MM    M                                         
-M      M   M   M                                        
-            M             MM                            
- M                        M                             
-  M                           M                         
- M    M              M         M                        
- M   MM           MMM                                   
-      M                M                                
-      M                                                 
-       M                                                
-         MMMMM       MMMM                
+
+                       MMMMMMMMMM                                 
+                   MM     M        MM                             
+                M        M            M                           
+              M         M    MM        M                          
+             M                          M                         
+            M                           M                         
+           M                                                      
+                                                                  
+          M                                                       
+          M       MM    M                                         
+          M      M   M   M                                        
+                      M             MM                            
+           M                        M                             
+            M                           M                         
+           M    M              M         M                        
+           M   MM           MMM                                   
+                M                M                                
+                M                                                 
+                 M                                                
+                   MMMMM       MMMM                
 
 ### Muzak-CLI
 
@@ -36,4 +37,5 @@ Create a new Muzak room at a provided URL
     => New Muzak room created: http://muzak.heroku.com/rooms/omglulwut
 
 Display the Muzak baby
+
     $ muzak baby
