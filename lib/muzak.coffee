@@ -6,25 +6,26 @@ MUZAK_REDIRECT = 'http://hawmuzak.heroku.com'
 
 argv = process.argv
 
-if argv
-  request = process.argv[2]
+current = ->
+  rest.get(MUZAK_REDIRECT, {
+    followRedirects: false
+  }).on 'complete', (headers, data) ->
+    sys.puts 'Current Muzak room is: ' + data.headers.location
 
+create = ->
+  rest.post(MUZAK_REDIRECT, {
+    data: { url: room }
+  }).on 'complete', (data, response) ->
+    sys.puts 'New Muzak room created: ' + response.headers.location
+
+if request = process.argv[2]
   if request == 'current'
-    rest.get(MUZAK_REDIRECT, {
-      followRedirects: false
-    }).on 'complete',
-    (headers, data) ->
-      sys.puts 'Current Muzak room is: ' + data.headers.location
-
+    current() 
   else if request == 'create'
     if room = process.argv[3]
-      rest.post(MUZAK_REDIRECT, {
-        data: { url: room }
-      }).on 'complete', (data, response) ->
-        sys.puts 'New Muzak room created: ' + response.headers.location
+      create()
     else
       sys.puts "Could not create a new room. You need to supply a URL for it."
-
   else if request == 'baby'
     muzakBaby = '''
                                                                                 
@@ -51,3 +52,5 @@ if argv
                                                                                 
     '''
     sys.puts muzakBaby
+else
+  current()
