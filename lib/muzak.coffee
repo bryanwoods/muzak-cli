@@ -19,15 +19,16 @@ create = ->
     sys.puts 'New Muzak room created: ' + response.headers.location
 
 if request = process.argv[2]
-  if request == 'current'
-    current() 
-  else if request == 'create'
-    if room = process.argv[3]
-      create()
-    else
-      sys.puts "Could not create a new room. You need to supply a URL for it."
-  else if request == 'baby'
-    muzakBaby = '''
+  switch request
+    when 'current'
+      current() 
+    when 'create'
+      if room = process.argv[3]
+        create()
+      else
+        sys.puts "Could not create a new room. You need to supply a URL for it."
+    when 'baby'
+      muzakBaby = '''
                                                                                 
                                      MMMMMMMMMM                                 
                                  MM     M        MM                             
@@ -50,7 +51,7 @@ if request = process.argv[2]
                                M                                                
                                  MMMMM       MMMM                               
                                                                                 
-    '''
-    sys.puts muzakBaby
+      '''
+      sys.puts muzakBaby
 else
   current()

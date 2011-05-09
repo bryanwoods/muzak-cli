@@ -23,17 +23,20 @@
     });
   };
   if (request = process.argv[2]) {
-    if (request === 'current') {
-      current();
-    } else if (request === 'create') {
-      if (room = process.argv[3]) {
-        create();
-      } else {
-        sys.puts("Could not create a new room. You need to supply a URL for it.");
-      }
-    } else if (request === 'baby') {
-      muzakBaby = '                                                        \n             MMMMMMMMMM                                 \n         MM     M        MM                             \n      M        M            M                           \n    M         M    MM        M                          \n   M                          M                         \n  M                           M                         \n M                                                      \n                                                        \nM                                                       \nM       MM    M                                         \nM      M   M   M                                        \n            M             MM                            \n M                        M                             \n  M                           M                         \n M    M              M         M                        \n M   MM           MMM                                   \n      M                M                                \n      M                                                 \n       M                                                \n         MMMMM       MMMM                               \n                                                        ';
-      sys.puts(muzakBaby);
+    switch (request) {
+      case 'current':
+        current();
+        break;
+      case 'create':
+        if (room = process.argv[3]) {
+          create();
+        } else {
+          sys.puts("Could not create a new room. You need to supply a URL for it.");
+        }
+        break;
+      case 'baby':
+        muzakBaby = '                                                        \n             MMMMMMMMMM                                 \n         MM     M        MM                             \n      M        M            M                           \n    M         M    MM        M                          \n   M                          M                         \n  M                           M                         \n M                                                      \n                                                        \nM                                                       \nM       MM    M                                         \nM      M   M   M                                        \n            M             MM                            \n M                        M                             \n  M                           M                         \n M    M              M         M                        \n M   MM           MMM                                   \n      M                M                                \n      M                                                 \n       M                                                \n         MMMMM       MMMM                               \n                                                        ';
+        sys.puts(muzakBaby);
     }
   } else {
     current();
