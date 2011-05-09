@@ -1,5 +1,5 @@
-sys     = require 'sys'
-rest    = require 'restler'
+sys  = require 'sys'
+rest = require 'restler'
 
 MUZAK_URL      = 'http://muzak.heroku.com'
 MUZAK_REDIRECT = 'http://hawmuzak.heroku.com'
