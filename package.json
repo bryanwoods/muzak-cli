@@ -2,7 +2,7 @@
   "author": "Bryan Woods <bryan@howaboutwe.com> (http://bryanwoods4e.com)",
   "name": "muzak",
   "description": "Command line interface for Muzak",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "http://github.com/bryanwoods/muzak-cli",
   "repository": {
     "url": "git://github.com/bryanwoods/muzak-cli.git"

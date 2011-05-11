@@ -1,9 +1,8 @@
 #!/usr/local/bin/node
 (function() {
-  var MUZAK_REDIRECT, MUZAK_URL, argv, create, current, muzakBaby, request, rest, room, sys;
+  var MUZAK_REDIRECT, argv, create, current, muzakBaby, request, rest, room, sys;
   sys = require('sys');
   rest = require('restler');
-  MUZAK_URL = 'http://muzak.heroku.com';
   MUZAK_REDIRECT = 'http://hawmuzak.heroku.com';
   argv = process.argv;
   current = function() {
